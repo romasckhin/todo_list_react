@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './App.css'
+import Cards from "./components/Cards";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const list = [
+    {
+        id: 0,
+        text: 'Make a beautiful icon'
+    },
+    {
+        id: 1,
+        text: 'Change background'
+    },
+    {
+        id: 2,
+        text: 'Transfer the project'
+    },
+]
+
+const style = {
+    "width":"700px"
 }
+
+const App = () => {
+
+    const [todolist, setTodolist] = useState(list)
+
+    return (
+
+        <div className='container'>
+            <div className='card' style={style} >
+               <Cards
+                   todolist={todolist}
+                   setTodolist={setTodolist}
+               />
+            </div>
+        </div>
+    );
+};
 
 export default App;
