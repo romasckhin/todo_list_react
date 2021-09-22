@@ -1,6 +1,6 @@
 import React from 'react';
-import CardTitle from "./CardTitle";
-import CardText from "./CardText";
+import TitleCard from "./TitleCard";
+import TextCard from "./TextCard";
 import AddNewCard from "./AddNewCard";
 
 const Cards = (props) => {
@@ -14,13 +14,13 @@ const Cards = (props) => {
     return (
 
         <div style={style} className={'card-body'}>
-            <CardTitle/>
+            <TitleCard/>
             <AddNewCard
                 setTodolist={setTodolist}
                 todolist={todolist}
             />
             {todolist.map(el =>
-                <CardText
+                <TextCard
                     cards={el}
                     todolist={todolist}
                     setTodolist={setTodolist}

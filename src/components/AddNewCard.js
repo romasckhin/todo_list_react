@@ -23,9 +23,6 @@ const AddNewCard = (props) => {
     return (
 
         <div style={style}>
-            {/*<input type="text" value={newText} onChange={newTextCard} />*/}
-            {/*<button onClick={addNewCard} type="button" className="btn btn-success">Add new card</button>*/}
-
                 <div className="input-group mb-3">
                     <input type="text" value={newText} onChange={newTextCard} className="form-control"
                            placeholder="↓ Write new text ↓"
