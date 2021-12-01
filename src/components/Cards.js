@@ -14,7 +14,9 @@ const Cards = (props) => {
     return (
 
         <div style={style} className={'card-body'}>
-            <TitleCard/>
+            <TitleCard
+                todolist={todolist}
+            />
             <AddNewCard
                 setTodolist={setTodolist}
                 todolist={todolist}

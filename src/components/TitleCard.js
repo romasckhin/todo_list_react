@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TitleCard = () => {
+const TitleCard = ({todolist}) => {
 
     const style = {
         "background":'rgb(181,215,178)',
@@ -11,7 +11,7 @@ const TitleCard = () => {
     }
     return (
         <div style={style} className={'card-body'}>
-            <h2  style={styleTitle}>Todo list</h2>
+            <h2  style={styleTitle}>Todo list: {todolist.length}</h2>
         </div>
     );
 };

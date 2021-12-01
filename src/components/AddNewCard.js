@@ -13,9 +13,13 @@ const AddNewCard = (props) => {
     }
 
     const addNewCard = () => {
-        const newCards = [...todolist, {id: Math.random(), text: newText}]
-        setTodolist(newCards)
-        setNewText('')
+        if ( newText.length >= 1  &&  newText.length <= 10 ) {
+            const newCards = [...todolist, {id: Math.random(), text: newText}]
+            setTodolist(newCards)
+            setNewText('')
+        } else {
+            setNewText('')
+        }
     }
     const newTextCard = (event) => {
         setNewText(event.target.value)
